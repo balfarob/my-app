@@ -11,15 +11,16 @@ function App() {
         <Navbar/>
          <Switch>
           <Router path="/blog">
-             blog
+             <blog />
           </Router>
           <Router path="/contacto">
-            contacto
+            <contacto />
           </Router>
           <Router path="/Shop">
+            <shop />
           </Router>
-          <Router path="/"> exact
-            Esta es la página de inicio
+          <Router path="/" exact>
+            <inicio />
           </Router>
           </Switch>
         <Footer/>
