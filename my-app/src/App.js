@@ -2,13 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
-import { BrowserRouter, Router, Switch } from 'react-router-dom';
+import { BrowserRouter, Link, Router, Switch } from 'react-router-dom';
+Link 
+from 'react-router-dom'
+import inicio from './components/inicio';
+import shop from './components/shop';
+import contacto from '.components/contacto';
+import blog from './components/blog';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        <Navbar/>
+{/*<Navbar/>*/}
          <Switch>
           <Router path="/blog">
              <blog />
@@ -16,14 +22,14 @@ function App() {
           <Router path="/contacto">
             <contacto />
           </Router>
-          <Router path="/Shop">
+          <Router path="/shop">
             <shop />
           </Router>
-          <Router path="/" exact>
+          <Router path="/">
             <inicio />
           </Router>
           </Switch>
-        <Footer/>
+{/*<Footer/>*/}
       </div>
     </BrowserRouter>
   );
