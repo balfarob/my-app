@@ -7,14 +7,21 @@ import { BrowserRouter, Router, Switch } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-      <div>
-       
+      <div className="container">
         <Navbar/>
          <Switch>
-           <Router path="/contacto">
-             Contactanos
-           </Router>
-         </Switch>
+          <Router path="/blog">
+             blog
+          </Router>
+          <Router path="/contacto">
+            contacto
+          </Router>
+          <Router path="/Shop">
+          </Router>
+          <Router path="/"> exact
+            Esta es la página de inicio
+          </Router>
+          </Switch>
         <Footer/>
       </div>
     </BrowserRouter>
