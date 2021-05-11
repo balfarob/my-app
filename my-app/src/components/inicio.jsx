@@ -7,3 +7,5 @@ const inicio = () => {
         </div>
     )
 }
+
+export default inicio;
