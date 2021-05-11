@@ -1,3 +1,6 @@
+import {
+  Link
+} from "react-router-dom";
 function Navbar() {
     return(
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -5,22 +8,18 @@ function Navbar() {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page">Inicio</a>
+          <Link to="/" class="nav-link active" aria-current="page">Inicio</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page">Shop</a>
+        <Link to="/shop" class="nav-link active" aria-current="page">Shop</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page">Contacto</a>
+        <Link to="/contacto" class="nav-link active" aria-current="page">Contacto</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page">Blog</a>
+        <Link to="/blog" class="nav-link active" aria-current="page">Blog</Link>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>

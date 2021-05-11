@@ -7,3 +7,4 @@ const contacto = () => {
         </div>
     )
 }
+export default contacto

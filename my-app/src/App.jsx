@@ -1,36 +1,49 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
-import { BrowserRouter, Link, Router, Switch } from 'react-router-dom';
-from 'react-router-dom'
-import inicio from './components/inicio.jsx';
-import shop from './components/shop.jsx';
-import contacto from '.components/contacto.jsx';
-import blog from './components/blog';
+import Inicio from './components/inicio.jsx';
+import Shop from './components/shop.jsx';
+import Contacto from './components/contacto.jsx';
+import Blog from './components/blog.jsx';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="container">
-{/*<Navbar/>*/}
-         <Switch>
-          <Router path="/blog">
-             <blog />
-          </Router>
-          <Router path="/contacto">
-            <contacto />
-          </Router>
-          <Router path="/shop">
-            <shop />
-          </Router>
-          <Router path="/">
-            <inicio />
-          </Router>
-          </Switch>
-{/*<Footer/>*/}
+      <div className="App">
+       
+        <Router>
+      <div>
+       <Navbar/>
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/contacto">
+            <Contacto/>
+          </Route>
+          <Route path="/blog">
+            <Blog/>
+          </Route>
+          <Route path="/shop">
+            <Shop/>
+          </Route>
+          <Route path="/">
+            <Inicio/>
+          </Route>
+          
+        </Switch>
+       <Footer/>
       </div>
-    </BrowserRouter>
+    </Router>
+       
+        
+    
+      </div>
   );
 }
 
