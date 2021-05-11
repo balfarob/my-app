@@ -10,40 +10,46 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useParams,
+  useLocation
 } from "react-router-dom";
 
 function App() {
   return (
-      <div className="App">
-       
-        <Router>
-      <div>
-       <Navbar/>
-        {/* A <Switch> looks through its children <Route>s and
+    <div className="App">
+
+      <Router>
+        <div>
+          <Navbar />
+          {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/contacto">
-            <Contacto/>
-          </Route>
-          <Route path="/blog">
-            <Blog/>
-          </Route>
-          <Route path="/shop">
-            <Shop/>
-          </Route>
-          <Route path="/">
-            <Inicio/>
-          </Route>
-          
-        </Switch>
-       <Footer/>
-      </div>
-    </Router>
-       
-        
-    
-      </div>
+          <Switch>
+          <Route path="/categories/:categoryId">
+              <Inicio />
+            </Route>
+            <Route path="/contacto">
+              <Contacto />
+            </Route>
+            <Route path="/blog">
+              <Blog />
+            </Route>
+            <Route path="/shop">
+              <Shop />
+            </Route>
+            <Route path="/">
+              <Inicio />
+            </Route>
+           
+
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+
+
+
+    </div>
   );
 }
 
